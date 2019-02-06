@@ -34,7 +34,7 @@ Install the different necessary components:
 	sudo yum install git -y
 	sudo yum install open-vm-tools -y
 	sudo yum update -y 
-  sudo systemctl reboot
+	sudo systemctl reboot
 
 Install pm2 and also download the different files from the git repository:
 

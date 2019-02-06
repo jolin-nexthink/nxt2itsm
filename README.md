@@ -26,7 +26,7 @@ If you are not familiar with CentOS firewalls, switch it off:
 
 Edit this file as sudo: /etc/selinux/config, and set: selinux=disabled
 
-##### For an online installation:
+### For an online installation:
 
 Install the different necessary components:
 
@@ -49,7 +49,7 @@ Make sure pm2 will autostart after a reboot:
 
 The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the configuration section for the next steps.
 
-##### For an offline installation:
+### For an offline installation:
 
 Copy the three following files form the offline_installation folder in the home directory of your user (i.e. /home/nexthink)
 

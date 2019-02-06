@@ -16,7 +16,7 @@
 /* Make each column float left with a padding*/
 [class*="col-"] {
     float: left;
-    padding: 3px;
+    padding: 2px;
 }
 
 .row {

@@ -26,7 +26,9 @@ If you are not familiar with CentOS firewalls, switch it off:
 
 Edit this file as sudo: /etc/selinux/config, and set: selinux=disabled
 
-For an online installation, install the different necessary components:
+### For an online installation:
+
+Install the different necessary components:
 
 	sudo yum install epel-release -y
 	sudo yum install nodejs -y
@@ -38,16 +40,44 @@ For an online installation, install the different necessary components:
 
 Install pm2 and also download the different files from the git repository:
 
-	npm -g install pm2
-	npm -g install https://github.com/nexthink-stuff/nxt2itsm/
+	sudo npm -g install pm2
+	sudo npm -g install nexthink-stuff/nxt2itsm
 
 Make sure pm2 will autostart after a reboot:
 
-	pm2 startup systemd
+	sudo pm2 startup systemd
 
-The solution is now installed in /usr/lib/node_modules/nxt2itsm.
+The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the configuration section for the next steps.
 
-For an offline installation
+### For an offline installation:
+
+Copy the three following files form the offline_installation folder in the home directory of your user (i.e. /home/nexthink)
+
+	npmbox.npmbox
+	pm2.npmbox
+	nxt2itsm.npmbox
+
+Create a subdirectory, then copy the npmbox.npmbox file in it
+
+	sudo mkdir /home/nexthink/npmbox
+	cd /home/nexthink/npmbox
+	sudo mv /home/nexthink/npmbox.npmbox .
+	
+Untar the file in the directory
+
+	sudo tar --no-same-owner --no-same-permissions -xvzf npmbox.npmbox
+
+Then install npmbox with the following command
+
+	sudo npm install --global --cache ./.npmbox.cache --optional --cache-min 99999999999 --shrinkwrap false npmbox
+	
+Once npmbox is install, you can now move to the installation of the other two files
+
+	cd /home/nexthink
+	sudo npmunbox -g pm2.npmbox
+	sudo npmunbox -g nxt2itsm.npmbox
+
+The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the configuration section for the next steps.
 
 # Configuration
 
@@ -61,8 +91,9 @@ Note that to access the https page, some certificates need to be put in place in
 
 Set either "selfsigned" or "trusted" for the "certificates" option in the settings.json depending if you are using self-signed certificates or certificates signed by a trusted Authority.
 
-Once the configuration is done, start the scripts from the /usr/lib/node_modules/nxt2itsm folder with the two following commands:
+Once the configuration is done, start pm2 and then the scripts from the /usr/lib/node_modules/nxt2itsm folder with the following commands:
 
+	sudo systemctl start pm2-root
 	sudo pm2 start refreshClientlist.js
 	sudo pm2 start nxt2itsm.js
 	sudo pm2 save

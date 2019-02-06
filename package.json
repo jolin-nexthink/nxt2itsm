@@ -10,7 +10,7 @@
     "express": "^4.16.3",
     "libxmljs": "0.19.0",
     "request": "^2.87.0",
-	"console-stamp": "^0.2.7"
+    "console-stamp": "^0.2.7"
   },
   "main": "nxt2itsm.js",
   "devDependencies": {},

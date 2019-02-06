@@ -38,8 +38,8 @@ Install the different necessary components:
 Install pm2 and also download the different files from the git repository:
 
 	npm -g install pm2
-	npm -g install https://github.com/jeromewyss/nxt2itsm  
-	
+	npm -g install https://github.com/nexthink-stuff/nxt2itsm/
+
 Make sure pm2 will autostart after a reboot:
 
 	pm2 startup systemd

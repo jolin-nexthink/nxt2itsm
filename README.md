@@ -91,8 +91,9 @@ Note that to access the https page, some certificates need to be put in place in
 
 Set either "selfsigned" or "trusted" for the "certificates" option in the settings.json depending if you are using self-signed certificates or certificates signed by a trusted Authority.
 
-Once the configuration is done, start the scripts from the /usr/lib/node_modules/nxt2itsm folder with the two following commands:
+Once the configuration is done, start pm2 and then the scripts from the /usr/lib/node_modules/nxt2itsm folder with the following commands:
 
+	sudo systemctl start pm2-root
 	sudo pm2 start refreshClientlist.js
 	sudo pm2 start nxt2itsm.js
 	sudo pm2 save

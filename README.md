@@ -51,7 +51,7 @@ The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the confi
 
 ### For an offline installation:
 
-Copy the three following files form the offline_installation folder in the home directory of your user (i.e. /home/nexthink)
+Copy the three following files from the offline_installation folder in the home directory of your user (i.e. /home/nexthink)
 
 	npmbox.npmbox
 	pm2.npmbox

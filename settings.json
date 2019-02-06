@@ -1,0 +1,21 @@
+{"engineOptions":{
+		"auth": {
+		"user": "integration_user",
+		"pass": "my_password"}
+	},
+"engines": ["engine_01_fqdn", "engine_02_fqdn"],
+"portal": "my_portal_fqdn",
+"portalOptions":{
+		"auth": {
+		"user": "integration_user_act",
+		"pass": "my_password"}
+	},
+"APIport": "1671",
+"ActEnabled": true,
+"scoreFiles": ["Device_Health.xml", "Office_Health.xml"],
+"scoreFile": "My_Score.xml",
+"DeviceInfo":true,
+"Finderlink":true,
+"certificates": "trusted",
+"Online": true
+}

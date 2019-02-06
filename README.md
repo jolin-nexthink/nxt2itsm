@@ -17,7 +17,7 @@ The score.xml may contain Nexthink act links.
 
 # Installation
 
-This installation is based upon a clean install of CentOS. 
+This installation is based upon a clean install of CentOS. CentOS ISO files can be downloaded from here: https://www.centos.org/download/
 
 If you are not familiar with CentOS firewalls, switch it off:
 
@@ -32,8 +32,9 @@ Install the different necessary components:
 	sudo yum install nodejs -y
 	sudo yum install mod_ssl openssl -y
 	sudo yum install git -y
+	sudo yum install open-vm-tools -y
 	sudo yum update -y 
-  sudo systemctl reboot
+	sudo systemctl reboot
 
 Install pm2 and also download the different files from the git repository:
 

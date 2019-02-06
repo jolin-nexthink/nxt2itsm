@@ -24,9 +24,9 @@ If you are not familiar with CentOS firewalls, switch it off:
 	sudo systemctl disable firewalld
 	sudo systemctl stop firewalld
 
-Edit this file: /etc/selinux/config, and set: selinux disabled
+Edit this file as sudo: /etc/selinux/config, and set: selinux=disabled
 
-Install the different necessary components:
+For an online installation, install the different necessary components:
 
 	sudo yum install epel-release -y
 	sudo yum install nodejs -y
@@ -46,6 +46,8 @@ Make sure pm2 will autostart after a reboot:
 	pm2 startup systemd
 
 The solution is now installed in /usr/lib/node_modules/nxt2itsm.
+
+For an offline installation
 
 # Configuration
 

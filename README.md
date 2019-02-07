@@ -60,6 +60,7 @@ Copy the offline_yum_packages folder in the home directory of your user (i.e. /h
 Copy the three following files from the offline_installation folder
 
 	npmbox.npmbox
+	dependencies.npmbox
 	pm2.npmbox
 	nxt2itsm.npmbox
 
@@ -81,6 +82,7 @@ Once npmbox is install, you can now move to the installation of the other two fi
 
 	cd /home/nexthink/
 	sudo npmunbox -g pm2.npmbox
+	sudo npmunbox -g dependencies.npmbox
 	sudo npmunbox -g nxt2itsm.npmbox
 	sudo pm2 startup systemd
 

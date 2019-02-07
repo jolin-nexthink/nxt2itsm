@@ -51,7 +51,12 @@ The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the confi
 
 ### For an offline installation:
 
-Copy the three following files from the offline_installation folder in the home directory of your user (i.e. /home/nexthink)
+Copy the offline_yum_packages folder in the home directory of your user (i.e. /home/nexthink). Once this is done, run the following commands
+
+	cd /home/nexthink/offline_yum_packages/
+	sudo rpm -Uvh *.rpm
+
+Copy the three following files from the offline_installation folder
 
 	npmbox.npmbox
 	pm2.npmbox
@@ -59,8 +64,8 @@ Copy the three following files from the offline_installation folder in the home 
 
 Create a subdirectory, then copy the npmbox.npmbox file in it
 
-	sudo mkdir /home/nexthink/npmbox
-	cd /home/nexthink/npmbox
+	mkdir /home/nexthink/npmbox
+	cd /home/nexthink/npmbox/
 	sudo mv /home/nexthink/npmbox.npmbox .
 	
 Untar the file in the directory
@@ -73,9 +78,10 @@ Then install npmbox with the following command
 	
 Once npmbox is install, you can now move to the installation of the other two files
 
-	cd /home/nexthink
+	cd /home/nexthink/
 	sudo npmunbox -g pm2.npmbox
 	sudo npmunbox -g nxt2itsm.npmbox
+	sudo pm2 startup systemd
 
 The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the configuration section for the next steps.
 
@@ -83,7 +89,9 @@ The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the confi
 
 Most of the configuration will be done in the settings.json file. You can find how the file is structured by accessing the following link: "https://appliance_fqdn/"
 
-Note that to access the https page, some certificates need to be put in place in a subfolder "keys". You can have 3 potential files in there depending if you are using trusted certificates or self-signed one: 
+Note that to access the https page, some certificates need to be put in place in a subfolder "keys". The files in the folder upon installation are simply examples.
+
+You can have 3 potential files in there depending if you are using trusted certificates or self-signed one: 
 
 	cert.pem -> the certificate file
 	key.pem -> the associated key
@@ -93,7 +101,9 @@ Set either "selfsigned" or "trusted" for the "certificates" option in the settin
 
 In case you need to generate self-signed certificate for the Appliance, you can use the following command:
 
-	openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout key.pem -out cert.pem
+	sudo openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout key.pem -out cert.pem
+
+Make sure to configure the different settings.json parameters. In case of doubt, you can always start
 
 Once the configuration is done, start pm2 and then the scripts from the /usr/lib/node_modules/nxt2itsm folder with the following commands:
 

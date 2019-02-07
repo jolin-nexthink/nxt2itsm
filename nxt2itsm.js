@@ -45,20 +45,21 @@ var jquery_path;
 var certificates_type;
 var online;
 var xmlscoreFiles = [];
+var httpsoptions;
 
 reloadStuff();
 
 // Options for the https server
 if (certificates_type == "trusted") {
-    const httpsoptions = {
+    httpsoptions = {
       key: fs.readFileSync(key_path, 'utf8'),
       cert: fs.readFileSync(cert_path, 'utf8'),
-      ca: fs.readFileSync(ca_path, 'utf8'),
+      ca: fs.readFileSync(ca_path, 'utf8')
     };
 } else {
-    const httpsoptions = {
+    httpsoptions = {
       key: fs.readFileSync(key_path, 'utf8'),
-      cert: fs.readFileSync(cert_path, 'utf8'),
+      cert: fs.readFileSync(cert_path, 'utf8')
     };
 }
 

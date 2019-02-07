@@ -8,5 +8,13 @@
   },
   "keywords": ["nexthink", "itsm", "integration"],
   "author": "ariej jeromewyss",
-  "license": "MIT"
+  "homepage": "https://github.com/nexthink-stuff/nxt2itsm#readme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nexthink-stuff/nxt2itsm/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nexthink-stuff/nxt2itsm.git"
+  }
 }

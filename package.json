@@ -6,13 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["nexthink", "itsm", "integration"],
-  "author": "ariej jeromewyss",
+  "keywords": [
+    "nexthink",
+    "itsm",
+    "integration"
+  ],
+  "author": {
+    "name": "ariej jeromewyss"
+  },
   "homepage": "https://github.com/nexthink-stuff/nxt2itsm#readme",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nexthink-stuff/nxt2itsm/issues"
   },
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nexthink-stuff/nxt2itsm.git"

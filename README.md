@@ -91,6 +91,10 @@ Note that to access the https page, some certificates need to be put in place in
 
 Set either "selfsigned" or "trusted" for the "certificates" option in the settings.json depending if you are using self-signed certificates or certificates signed by a trusted Authority.
 
+In case you need to generate self-signed certificate for the Appliance, you can use the following command:
+
+	openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout key.pem -out cert.pem
+
 Once the configuration is done, start pm2 and then the scripts from the /usr/lib/node_modules/nxt2itsm folder with the following commands:
 
 	sudo systemctl start pm2-root

@@ -56,9 +56,9 @@
   "bugs": {
     "url": "https://github.com/nexthink-stuff/nxt2itsm/issues"
   },
+  "dependencies": {},
   "description": "Displays Nexthink scores in HTML for integration with ITSM tooling",
   "devDependencies": {},
-  "dependencies": {},
   "homepage": "https://github.com/nexthink-stuff/nxt2itsm#readme",
   "keywords": [
     "nexthink",

@@ -100,11 +100,13 @@ You can have 3 potential files in there depending if you are using trusted certi
 
 Set either "selfsigned" or "trusted" for the "certificates" option in the settings.json depending if you are using self-signed certificates or certificates signed by a trusted Authority.
 
-In case you need to generate self-signed certificate for the Appliance, you can use the following command:
+In case you need to generate self-signed certificate for the Appliance, you can use the following commands:
 
+	cd /usr/lib/nodes_modules/nxt2itsm/keys/
+	sudo rm -f *.pem
 	sudo openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout key.pem -out cert.pem
 
-Make sure to configure the different settings.json parameters. In case of doubt, you can always start
+Make sure to configure the different settings.json parameters. In case of doubt, you can always start the application and check the different settings from the main page https://appliance_fqdn/.
 
 Once the configuration is done, start pm2 and then the scripts from the /usr/lib/node_modules/nxt2itsm folder with the following commands:
 

@@ -1,31 +1,85 @@
 {
-  "name": "nxt2itsm",
-  "version": "2.0.0",
-  "description": "Displays Nexthink scores in HTML for integration with ITSM tooling",
-  "author": "ariej <ariejoosse@yahoo.com> and jeromew <jerome.wyss@infomaniak.ch> (https://github.com/nexthink-stuff/nxt2itsm)",
-  "license": "MIT",
-  "homepage": "https://github.com/nexthink-stuff/nxt2itsm#readme",
+  "_args": [
+    [
+      {
+        "raw": "nexthink-stuff/nxt2itsm",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "nexthink-stuff/nxt2itsm",
+        "spec": "github:nexthink-stuff/nxt2itsm",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:nexthink-stuff/nxt2itsm.git",
+          "sshUrl": "git+ssh://git@github.com/nexthink-stuff/nxt2itsm.git",
+          "httpsUrl": "git+https://github.com/nexthink-stuff/nxt2itsm.git",
+          "gitUrl": "git://github.com/nexthink-stuff/nxt2itsm.git",
+          "shortcut": "github:nexthink-stuff/nxt2itsm",
+          "directUrl": "https://raw.githubusercontent.com/nexthink-stuff/nxt2itsm/master/package.json"
+        }
+      },
+      "/home/nexthink"
+    ]
+  ],
+  "_from": "nexthink-stuff/nxt2itsm",
+  "_inCache": true,
+  "_location": "/nxt2itsm",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nexthink-stuff/nxt2itsm",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "nexthink-stuff/nxt2itsm",
+    "spec": "github:nexthink-stuff/nxt2itsm",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:nexthink-stuff/nxt2itsm.git",
+      "sshUrl": "git+ssh://git@github.com/nexthink-stuff/nxt2itsm.git",
+      "httpsUrl": "git+https://github.com/nexthink-stuff/nxt2itsm.git",
+      "gitUrl": "git://github.com/nexthink-stuff/nxt2itsm.git",
+      "shortcut": "github:nexthink-stuff/nxt2itsm",
+      "directUrl": "https://raw.githubusercontent.com/nexthink-stuff/nxt2itsm/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "git://github.com/nexthink-stuff/nxt2itsm.git#94a208cbeb05ffae9f216414acf452d3c0f2f714",
+  "_shasum": "1a65d187902c62d618b15cab9b7fbec3926f3a1e",
+  "_shrinkwrap": null,
+  "_spec": "nexthink-stuff/nxt2itsm",
+  "_where": "/home/nexthink",
+  "author": "ariej jeromewyss (https://github.com/nexthink-stuff/nxt2itsm)",
+  "bugs": {
+    "url": "https://github.com/nexthink-stuff/nxt2itsm/issues"
+  },
   "dependencies": {
     "async": "^2.6.1",
+    "console-stamp": "^0.2.7",
     "express": "^4.16.3",
     "libxmljs": "0.19.0",
-    "request": "^2.87.0",
-    "console-stamp": "^0.2.7"
+    "request": "^2.87.0"
   },
-  "main": "nxt2itsm.js",
+  "description": "Displays Nexthink scores in HTML for integration with ITSM tooling",
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nexthink-stuff/nxt2itsm.git"
-  },
+  "homepage": "https://github.com/nexthink-stuff/nxt2itsm#readme",
   "keywords": [
     "nexthink",
     "itsm"
   ],
-  "bugs": {
-    "url": "https://github.com/nexthink-stuff/nxt2itsm/issues"
-  }
+  "license": "MIT",
+  "main": "nxt2itsm.js",
+  "name": "nxt2itsm",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nexthink-stuff/nxt2itsm.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.0.0"
 }

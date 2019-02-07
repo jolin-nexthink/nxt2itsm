@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/nexthink-stuff/nxt2itsm#readme",
   "license": "MIT",
+  "dependencies": {},
   "bugs": {
     "url": "https://github.com/nexthink-stuff/nxt2itsm/issues"
   },

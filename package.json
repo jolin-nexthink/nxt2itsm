@@ -23,6 +23,6 @@
   "preferGlobal": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nexthink-stuff/nxt2itsm.git"
+    "url": "git//github.com/nexthink-stuff/nxt2itsm.git"
   }
 }

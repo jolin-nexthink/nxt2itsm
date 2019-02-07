@@ -41,6 +41,7 @@ Install the different necessary components:
 Install pm2 and also download the different files from the git repository:
 
 	sudo npm -g install pm2
+	sudo npm -g install express async libxmljs console-stamp request
 	sudo npm -g install nexthink-stuff/nxt2itsm
 
 Make sure pm2 will autostart after a reboot:

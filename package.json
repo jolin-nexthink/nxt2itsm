@@ -1,26 +1,4 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "nexthink-stuff/nxt2itsm",
-        "scope": null,
-        "escapedName": null,
-        "name": null,
-        "rawSpec": "nexthink-stuff/nxt2itsm",
-        "spec": "github:nexthink-stuff/nxt2itsm",
-        "type": "hosted",
-        "hosted": {
-          "type": "github",
-          "ssh": "git@github.com:nexthink-stuff/nxt2itsm.git",
-          "sshUrl": "git+ssh://git@github.com/nexthink-stuff/nxt2itsm.git",
-          "httpsUrl": "git+https://github.com/nexthink-stuff/nxt2itsm.git",
-          "gitUrl": "git://github.com/nexthink-stuff/nxt2itsm.git",
-          "shortcut": "github:nexthink-stuff/nxt2itsm",
-          "directUrl": "https://raw.githubusercontent.com/nexthink-stuff/nxt2itsm/master/package.json"
-        }
-      }
-    ]
-  ],
   "name": "nxt2itsm",
   "version": "2.0.0",
   "description": "Nexthink score to ITSM solutions (reworked with Arie Joose and Alain Bernard)",

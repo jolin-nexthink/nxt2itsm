@@ -1,9 +1,23 @@
 # nxt2itsm
+
 Nexthink score to ITSM solutions (reworked with Arie Joose and Alain Bernard)
 
 Displays Nexthink scores per device in HTML.
 
 The purpose of this package is to provide a connector between Nexthink engines and ITSM tooling, like TOPdesk. It is not limited to this ITSM platform, but the initial version is targeted for TOPdesk.
+
+# Requirements
+
+The Appliance on which this tool will be installed has the following hardware requirements:
+
+- 2 CPU Cores
+- 2 GB of RAM
+- 20 GB of disk space
+
+In term of connectivity, this Appliance needs to have access to:
+
+- API of the Engine Appliance(s) (port 1671 if default was kept)
+- Remote Action API of the Portal Appliance
 
 # Usage 
 

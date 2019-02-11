@@ -96,9 +96,17 @@ Once npmbox is install, you can now move to the installation of the other two fi
 
 	cd /home/nexthink/
 	sudo npmunbox -g pm2.npmbox
-	sudo npmunbox -g dependencies.npmbox
 	sudo npmunbox -g nxt2itsm.npmbox
 	sudo pm2 startup systemd
+	
+As one of the dependencies need some specific additional files, create a subfolder to extract them, and then copy them at the right location:
+
+	cd /home/nexthink
+	mkdir libxmljs
+	mv node-v48-linux-x64.tar.gz libxmljs/
+	cd libxmljs/
+	tar -xvzf node-v48-linux-x64.tar.gz
+	sudo mv Release/ /usr/lib/node_modules/nxt2itsm/node_modules/libxmljs
 
 The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the configuration section for the next steps.
 

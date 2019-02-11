@@ -1,9 +1,23 @@
 # nxt2itsm
+
 Nexthink score to ITSM solutions (reworked with Arie Joose and Alain Bernard)
 
 Displays Nexthink scores per device in HTML.
 
 The purpose of this package is to provide a connector between Nexthink engines and ITSM tooling, like TOPdesk. It is not limited to this ITSM platform, but the initial version is targeted for TOPdesk.
+
+# Requirements
+
+The Appliance on which this tool will be installed has the following hardware requirements:
+
+- 2 CPU Cores
+- 2 GB of RAM
+- 20 GB of disk space
+
+In term of connectivity, this Appliance needs to have access to:
+
+- API of the Engine Appliance(s) (port 1671 if default was kept)
+- Remote Action API of the Portal Appliance
 
 # Usage 
 
@@ -82,9 +96,17 @@ Once npmbox is install, you can now move to the installation of the other two fi
 
 	cd /home/nexthink/
 	sudo npmunbox -g pm2.npmbox
-	sudo npmunbox -g dependencies.npmbox
 	sudo npmunbox -g nxt2itsm.npmbox
 	sudo pm2 startup systemd
+	
+As one of the dependencies need some specific additional files, create a subfolder to extract them, and then copy them at the right location:
+
+	cd /home/nexthink
+	mkdir libxmljs
+	mv node-v48-linux-x64.tar.gz libxmljs/
+	cd libxmljs/
+	tar -xvzf node-v48-linux-x64.tar.gz
+	sudo mv Release/ /usr/lib/node_modules/nxt2itsm/node_modules/libxmljs
 
 The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the configuration section for the next steps.
 

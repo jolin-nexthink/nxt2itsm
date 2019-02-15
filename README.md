@@ -74,7 +74,7 @@ Copy the offline_yum_packages folder in the home directory of your user (i.e. /h
 Copy the three following files from the offline_installation folder
 
 	npmbox.npmbox
-	dependencies.npmbox
+	node-v48-linux-x64.tar.gz
 	pm2.npmbox
 	nxt2itsm.npmbox
 

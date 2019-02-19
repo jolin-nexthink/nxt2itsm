@@ -114,9 +114,12 @@ The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the confi
 
 Most of the configuration will be done in the settings.json file. You can find how the file is structured by accessing the following link: "https://appliance_fqdn/"
 
-Note that to access the https page, some certificates need to be put in place in a subfolder "keys". The files in the folder upon installation are simply examples.
+Here are some important points:
 
-You can have 3 potential files in there depending if you are using trusted certificates or self-signed one: 
+- The different score files need to be in the same folder as the nxt2itsm.js file (/usr/lib/node_modules/nxt2itsm/) and then listed in the settings.json file.
+- The certificates need to be put in place (or created if selfsigned) in the "keys" subfolder. The files in the folder upon installation are simply examples.
+
+You can have 3 potential files in the "keys" folder depending if you are using trusted certificates or self-signed one: 
 
 	cert.pem -> the certificate file
 	key.pem -> the associated key
@@ -131,8 +134,6 @@ In case you need to generate self-signed certificate for the Appliance, you can 
 	sudo openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout key.pem -out cert.pem
 
 Make sure to configure the different settings.json parameters. In case of doubt, you can always start the application and check the different settings from the main page https://appliance_fqdn/.
-
-Note that the different score files need to be in the same folder as the nxt2itsm.js file (/usr/lib/node_modules/nxt2itsm/)
 
 Once the configuration is done, start pm2 and then the scripts from the /usr/lib/node_modules/nxt2itsm folder with the following commands:
 

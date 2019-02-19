@@ -556,18 +556,23 @@ function readNormalization(score_norm) {
                     throw 'Error with normalization: no "Enum" tag found in "Enums"';
                 }
 				Object.assign(normalization, {'type': 'enum'});
-
+                console.info('Normalization of type: Enum');
                 var elements = [];
-				for (enumindex in enums) {
+    				for (enumindex in enums) {
                     var enum_xml = enums[enumindex];
 					var value = enum_xml.attr('Value').value();
+                    console.info('Value: ' + value);
                     var label_attr = enum_xml.attr('Label');
 					if ( label_attr == null){
 						var label = '';
+                        console.info('No Label');
 					}
 					else {
                         var label = label_attr.value();
+                        console.info('Label: ' + label);
 					}
+
+
                     var element = [value, label];
                     elements.push(element);
 				}
@@ -581,17 +586,20 @@ function readNormalization(score_norm) {
                     throw 'Error with normalization: no "String" tag found in "Strings"';
                 }
 				Object.assign(normalization, {'type': 'string'});
-
+                console.info('Normalization of type: String');
                 var elements = [];
 				for (stringindex in stringz) {
                     var string_xml = stringz[stringindex];
 					var value = string_xml.attr('Value').value();
+                    console.info('Value: ' + value);
                     var label_attr = string_xml.attr('Label');
-					if ( label_attr == null){
+                    if ( label_attr == null){
 						var label = '';
+                        console.info('No Label');
 					}
 					else {
                         var label = label_attr.value();
+                        console.info('Label: ' + label);
 					}
                     var element = [value, label];
                     elements.push(element);
@@ -606,24 +614,29 @@ function readNormalization(score_norm) {
                     throw 'Error with normalization: no "Range" tag found in "Ranges"';
                 }
 				Object.assign(normalization, {'type': 'range'});
-
+                console.info('Normalization of type: Range');
                 var elements = [];
 				for (rangeindex in rangez) {
                     var range_xml = rangez[rangeindex];
 					var from_value = range_xml.get("./From").attr('Value').value();
+                    console.info('From Value: ' + from_value);
                     var to_attr = range_xml.get("./To");
                     if ( to_attr == null) {
                         var to_value = '';
+                        console.info('No To Value');
                     } else {
                         var to_value = to_attr.attr('Value').value();
+                        console.info('To Value: ' + to_value);
                     }
 
                     var label_attr = range_xml.attr('Label');
-					if ( label_attr == null){
+                    if ( label_attr == null){
 						var label = '';
+                        console.info('No Label');
 					}
 					else {
                         var label = label_attr.value();
+                        console.info('Label: ' + label);
 					}
                     var element = [from_value, to_value, label];
                     elements.push(element);
@@ -673,6 +686,7 @@ function payloadToLabel(payload, normalization, format) {
                     } else {
                         displayed_payload = label;
                     }
+                    return displayed_payload;
                 }
             }
             break;
@@ -690,6 +704,7 @@ function payloadToLabel(payload, normalization, format) {
                         } else {
                             displayed_payload = label;
                         }
+                        return displayed_payload;
                     }
                 }
             }

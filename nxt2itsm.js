@@ -28,6 +28,7 @@ console.info('Path of the key: ' + key_path);
 console.info('Path of the settings.json file: ' + settings_path);
 console.info('Path of the clientList.json file: ' + clientList_path);
 console.info('Path of the jquery.js file: ' + jquery_path);
+console.info('Path of the score files: ' + scores_path);
 
 // Definition of the default fields to be selected in the query
 const default_fields = 'device_uid last_seen';
@@ -220,7 +221,7 @@ function logSettings(){
 function readXMLs(){
     console.info('======= Reading the score files =======');
 	for (xmlCount in xmlscoreFiles) {
-		var xmlfile = __dirname + '/' + xmlscoreFiles[xmlCount];
+		var xmlfile = scores_path + '/' + xmlscoreFiles[xmlCount];
         console.info(`======= Reading file: ${xmlfile}`);
         var main_score = {};
         var scoredef_name = '';

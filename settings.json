@@ -12,8 +12,6 @@
 	},
 "APIport": "1671",
 "ActEnabled": true,
-"scoreFiles": ["Device_Health.xml", "Office_Health.xml"],
-"scoreFile": "My_Score.xml",
 "DeviceInfo":true,
 "Finderlink":true,
 "certificates": "trusted",

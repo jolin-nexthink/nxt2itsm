@@ -18,6 +18,7 @@ const key_path = __dirname + '/keys/key.pem';
 const ca_path = __dirname + '/keys/ca.pem';
 const settings_path = __dirname + '/settings.json';
 const clientList_path = __dirname + '/clientList.json';
+const scores_path = __dirname + '/Scores/';
 
 // Write the different paths to log as information
 console.info('======= Paths =======');
@@ -195,12 +196,8 @@ function reloadStuff() {
     } else {
         act_enabled = settings.ActEnabled;
     }
-    if (typeof settings.scoreFiles === 'undefined') {
-        xmlscoreFiles = [];
-        xmlscoreFiles.push( settings.scoreFile );
-    } else {
-        xmlscoreFiles = settings.scoreFiles;
-    }
+    xmlscoreFiles = fs.readdirSync(scores_path);
+
     logSettings();
 
 	readXMLs();
@@ -211,11 +208,7 @@ function reloadStuff() {
 function logSettings(){
     console.info('======= settings.json used content =======');
     console.info(`Portal Address: ${portal}`);
-    if (typeof settings.scoreFiles === 'undefined') {
-		console.info(`Score file: ${settings.scoreFile}`);
-	} else {
-        console.info(`List of score files: ${settings.scoreFiles}`);
-    }
+    console.info(`List of score files: ${xmlscoreFiles}`);
     console.info(`NXQL API port: ${api_port}`);
     console.info(`Act Enabled: ${act_enabled}`);
     console.info(`Display Device Info: ${device_info}`);
@@ -1175,16 +1168,6 @@ function writeConfiguration(res){
     res.write("<td>Certificates</td>");
     res.write("<td>Boolean value used to determine if a Finder button is displayed or not. Default is 'selfsigned'.</td>");
     res.write(`<td>"certificates": "trusted"</td>`);
-    res.write("</tr>");
-    res.write("<tr>");
-    res.write("<td>scoreFile*</td>");
-    res.write("<td>Name of a score file.</td>");
-    res.write(`<td>"scoreFile": "L1_Checklist.xml"</td>`);
-    res.write("</tr>");
-    res.write("<tr>");
-    res.write("<td>scoreFiles*</td>");
-    res.write("<td>Array of score file names.</td>");
-    res.write(`<td>"scoreFiles": ["L1_Checklist.xml", "Compliance.xml"]</td>`);
     res.write("</tr>");
     res.write("</table>");
     res.write("</div>");

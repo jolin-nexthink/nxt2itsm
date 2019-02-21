@@ -66,8 +66,10 @@ The solution is now installed in /usr/lib/node_modules/nxt2itsm. Go to the confi
 
 ### For an offline installation:
 
-Copy the offline_yum_packages folder in the home directory of your user (i.e. /home/nexthink). Once this is done, run the following commands
-
+Copy the offline_yum_packages.tar file in the home directory of your user (i.e. /home/nexthink). Once this is done, run the following commands
+	
+	mkdir offline_yum_packages
+	tar -xvf offline_yum_packages.tar -C offline_yum_packages/
 	cd /home/nexthink/offline_yum_packages/
 	sudo rpm -Uvh *.rpm
 

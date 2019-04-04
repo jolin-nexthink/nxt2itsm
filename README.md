@@ -127,6 +127,8 @@ You can have 3 potential files in the "keys" folder depending if you are using t
 	key.pem -> the associated key
 	ca.pem -> the root certificate (in case of trusted certificates)
 
+Note that the cert file should contain the certificate itself as well as the chained intermediate certificates if there are some to allow the application to link the certificate to the root.
+
 Set either "selfsigned" or "trusted" for the "certificates" option in the settings.json depending if you are using self-signed certificates or certificates signed by a trusted Authority.
 
 In case you need to generate self-signed certificate for the Appliance, you can use the following commands:
